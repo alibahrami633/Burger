@@ -1,31 +1,63 @@
-//Model is the business layer
-// Import the ORM to create functions that will interact with the database.
-const orm = require("../config/orm.js");
-const dbName = "burgers";
+// Controller is mostly setting the routes
 
-let burgerController = {
-    all: (cb) => {
-        orm.all(dbName, (res) => {
-            cb(res);
-        });
-    },
-    // The variables cols and vals are arrays.
-    create: (cols, vals, cb) => {
-        orm.create(dbName, cols, vals, (res) => {
-            cb(res);
-        });
-    },
-    update: (objColVals, condition, cb) => {
-        orm.update(dbName, objColVals, condition, (res) => {
-            cb(res);
-        });
-    },
-    delete: (condition, cb) => {
-        orm.delete(dbName, condition, (res) => {
-            cb(res);
-        });
-    }
-};
+var express = require("express");
 
-// Export the database functions for the controller (catsController.js).
-module.exports = burgerController;
+var router = express.Router();
+
+// Import the model (burger.js) to use its database functions.
+var burgerModel = require("../models/burger.js");
+
+// Create all our routes and set up logic within those routes where required.
+router.get("/", (req, res) => {
+    burgerModel.all((data) => {
+        let hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
+});
+
+router.post("/api/burgers", (req, res) => {
+    // burgerModel.create([
+    //     "name", "sleepy"
+    // ], [
+    //     req.body.name, req.body.sleepy
+    // ], function (result) {
+    //     // Send back the ID of the new quote
+    //     res.json({ id: result.insertId });
+    // });
+});
+
+router.put("/api/burgers/:id", (req, res) => {
+    // let condition = "id = " + req.params.id;
+
+    // console.log("condition", condition);
+
+    // burgerModel.update({
+    //     sleepy: req.body.sleepy
+    // }, condition, (result) => {
+    //     if (result.changedRows == 0) {
+    //         // If no rows were changed, then the ID must not exist, so 404
+    //         return res.status(404).end();
+    //     } else {
+    //         res.status(200).end();
+    //     }
+    // });
+});
+
+router.delete("/api/burgers/:id", (req, res) => {
+    // let condition = "id = " + req.params.id;
+
+    // burgerModel.delete(condition, (result) => {
+    //     if (result.affectedRows == 0) {
+    //         // If no rows were changed, then the ID must not exist, so 404
+    //         return res.status(404).end();
+    //     } else {
+    //         res.status(200).end();
+    //     }
+    // });
+});
+
+// Export routes for server.js to use.
+module.exports = router;
