@@ -1,19 +1,43 @@
-<div class="burger-image">
-    <img src="assets/img/burgerA.png" alt="eat-da-burger">
-</div>
+<main class="container text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="burger-image">
+                <img class="img-fluid" src="assets/img/burgerA.png" alt="eat-da-burger">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Eat-Da-Burger!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <hr />
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+                <hr />
+            </ul>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
 
-<h1>Eat-Da-Burger!</h1>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<form class="create-form">
-    <textarea id="burger_txt"></textarea>
-    <button type="submit">Add-Da-Burger!</button>
-    <label>Enter a burger you want to eat...</label>
-</form>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <form class="create-form" id="add_burger_form">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="burger_txt"
+                        placeholder="Enter a burger you want to eat..." aria-label="burger name"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-outline-warning">Add-Da-Burger!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
