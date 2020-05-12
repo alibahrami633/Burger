@@ -98,6 +98,15 @@ let orm = {
 
             cb(result);
         });
+    },
+    allConditional: (table, condition, cb) => {
+        let queryString = "SELECT * FROM " + table + " WHERE " + condition + ";";
+        connection.query(queryString, (err, result) => {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
     }
 };
 

@@ -2,6 +2,14 @@
 
 <h1>Eat-Da-Burger!</h1>
 
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
 <form class="create-form">
     <textarea id="burger_txt"></textarea>
     <button type="submit">Add-Da-Burger!</button>
