@@ -11,6 +11,7 @@ const config = {
     database: process.env.MYSQL_DATABASE
 };
 
+
 /** Check for process.env.JAWSDB_URL first since this app is hosted on heroku */
 const connection = mysql.createConnection(process.env.JAWSDB_URL || config);
 
