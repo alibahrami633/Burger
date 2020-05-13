@@ -1,22 +1,26 @@
 {
-    "name": "eat_da_burger",
+    "name": "eat-da-burger",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "watch": "nodemon server.js"
+      "start": "node server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Ali Bahrami",
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "author": "",
     "license": "ISC",
-    "dependencies": {
-        "dotenv": "^8.2.0",
-        "express": "^4.16.3",
-        "express-handlebars": "^3.0.0",
-        "mysql": "^2.18.1"
+    "bugs": {
+      "url": ""
     },
-    "devDependencies": {
-        "handlebars-helper-css": "^0.1.0"
+    "homepage": "",
+    "dependencies": {
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-handlebars": "^4.0.4",
+      "mysql": "^2.18.1"
     }
-}
+  }
