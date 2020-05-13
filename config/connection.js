@@ -1,13 +1,18 @@
 // Set up MySQL connection.
-var mysql = require("mysql");
+const mysql = require("mysql");
+require("dotenv").config();
 
-var connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "Ali633633@",
-    database: "burger_db"
-});
+/** This object represents the default database configuration */
+const config = {
+    port: process.env.MYSQL_PORT,
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
+};
+
+/** Check for process.env.JAWSDB_URL first since this app is hosted on heroku */
+const connection = mysql.createConnection(process.env.JAWSDB_URL || config);
 
 // Make connection.
 connection.connect((err) => {
