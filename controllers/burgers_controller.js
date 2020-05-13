@@ -30,33 +30,20 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-    // let condition = "id = " + req.params.id;
+    let condition = "id = " + req.params.id;
 
-    // console.log("condition", condition);
+    console.log("condition", condition);
 
-    // burgerModel.update({
-    //     sleepy: req.body.sleepy
-    // }, condition, (result) => {
-    //     if (result.changedRows == 0) {
-    //         // If no rows were changed, then the ID must not exist, so 404
-    //         return res.status(404).end();
-    //     } else {
-    //         res.status(200).end();
-    //     }
-    // });
-});
-
-router.delete("/api/burgers/:id", (req, res) => {
-    // let condition = "id = " + req.params.id;
-
-    // burgerModel.delete(condition, (result) => {
-    //     if (result.affectedRows == 0) {
-    //         // If no rows were changed, then the ID must not exist, so 404
-    //         return res.status(404).end();
-    //     } else {
-    //         res.status(200).end();
-    //     }
-    // });
+    burgerModel.update({
+        sleepy: req.body.sleepy
+    }, condition, (result) => {
+        if (result.changedRows == 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
 });
 
 // Export routes for server.js to use.
