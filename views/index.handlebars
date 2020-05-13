@@ -11,14 +11,14 @@
             <h1>Eat-Da-Burger!</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="updatable-list">
         <div class="col-md-6">
             <ul class="list-group list-group-flush">
                 <hr />
                 {{#each burgers}}
-                {{#if devoured}}
+                {{#unless devoured}}
                 {{> burgers/burger-block devoured=false}}
-                {{/if}}
+                {{/unless}}
                 {{/each}}
                 <hr />
             </ul>
@@ -27,9 +27,9 @@
             <ul class="list-group list-group-flush">
                 <hr />
                 {{#each burgers}}
-                {{#unless devoured}}
+                {{#if devoured}}
                 {{> burgers/burger-devoured-block devoured=true}}
-                {{/unless}}
+                {{/if}}
                 {{/each}}
                 <hr />
             </ul>

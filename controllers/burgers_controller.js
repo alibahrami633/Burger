@@ -19,14 +19,14 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-    // burgerModel.create([
-    //     "name", "sleepy"
-    // ], [
-    //     req.body.name, req.body.sleepy
-    // ], function (result) {
-    //     // Send back the ID of the new quote
-    //     res.json({ id: result.insertId });
-    // });
+    burgerModel.create([
+        "name", "devoured"
+    ], [
+        req.body.name, false
+    ], function (result) {
+        // Send back the ID of the new quote
+        res.json({ id: result.insertId });
+    });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
