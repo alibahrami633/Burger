@@ -24,7 +24,7 @@
 ## How to Use
 <hr/>
     <p>
-        The user entry can simply click on the main button in the middle of the page and will be redirected to "Add Note" page. Then they can add new note, remove or review the existing note from the list on the left side of the page.
+        The user can simply add a new burger name into the text input and eat it using devoure button in front of the new burger's name.
     </p>
 <hr/>
 <br>
@@ -41,13 +41,12 @@
         Clone this repo
         Clone this repo through git bash to your local computer using:
 
-        git clone `git@github.com:alibahrami633/Note-Taker.git`
-        Install packages
-        You will also need to install the express npm package to your environment.
+        git clone `git@github.com:alibahrami633/Burger.git`
+        Install packages using "npm install"
+        
+        Install the database using schema.sql on MySQL Workbench and change the database credentials 
+        to your own local or remote chosen database
 
-        Browse to the folder where you cloned the Repo and install the package:
-
-        $ npm install 
         Start the server
         To run the server, browse to the local folder where you cloned the Repo and execute
 
@@ -55,7 +54,7 @@
         The server should now start executing.
 
         Open the Website
-        Browse to http://localhost:{PORT(the defualt port you set)} to view the application website.
+        Browse to http://localhost:{your chosen PORT number} to view the application website.
     </p>
 <hr/>
 <br>
@@ -65,7 +64,7 @@
 
 <hr/>
     <p>
-        <a href="https://ali-note-taker.herokuapp.com/" target="_blank">Deployed Application </a>
+        <a href="https://eat-my-burga.herokuapp.com/" target="_blank">Deployed Application </a>
     </p>
 <hr/>
 <br>
