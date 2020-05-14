@@ -33,21 +33,21 @@
 ## Installation Guide
 <hr/>
     <p>
-        To install a local instance of the application, follow the steps below:
-        Node.js
-        This application needs Node.js to execute. To install Node.js, run the appropriate installer from https://nodejs.org/en/download/ and follow the prompts to complete the installation.  
-        Clone this repo
-        Clone this repo through git bash to your local computer using:
-        git clone `git@github.com:alibahrami633/Burger.git`
-        Install packages using "npm install"
-        Install the database using schema.sql on MySQL Workbench and change the database credentials 
-        to your own local or remote chosen database
-        Start the server
-        To run the server, browse to the local folder where you cloned the Repo and execute
-        $ npm start 
-        The server should now start executing.
-        Open the Website
-        Browse to http://localhost:{your chosen PORT number} to view the application website.
+        To install a local instance of the application, follow the steps below: <br>
+        Node.js <br>
+        This application needs Node.js to execute. To install Node.js, run the appropriate installer from https://nodejs.org/en/download/ and follow the prompts to complete the installation.  <br> 
+        Clone this repo<br>
+        Clone this repo through git bash to your local computer using:<br>
+        git clone `git@github.com:alibahrami633/Burger.git`<br>
+        Install packages using "npm install"<br>
+        Install the database using schema.sql on MySQL Workbench and change the database credentials <br>
+        to your own local or remote chosen database<br>
+        Start the server<br>
+        To run the server, browse to the local folder where you cloned the Repo and execute<br>
+        $ npm start <br>
+        The server should now start executing.<br>
+        Open the Website<br>
+        Browse to http://localhost:{your chosen PORT number} to view the application website.<br>
     </p>
 <hr/>
 <br>
