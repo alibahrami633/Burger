@@ -33,6 +33,7 @@
 ## Installation Guide
 <hr/>
     <p>
+    ```
         To install a local instance of the application, follow the steps below: <br>
         Node.js <br>
         This application needs Node.js to execute. To install Node.js, run the appropriate installer from https://nodejs.org/en/download/ and follow the prompts to complete the installation.  <br> 
@@ -48,6 +49,7 @@
         The server should now start executing.<br>
         Open the Website<br>
         Browse to http://localhost:{your chosen PORT number} to view the application website.<br>
+    ```
     </p>
 <hr/>
 <br>
