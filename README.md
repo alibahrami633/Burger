@@ -32,9 +32,10 @@
 
 ## Installation Guide
 <hr/>
-    ###To install a local instance of the application, follow the steps below:
+    To install a local instance of the application, follow the steps below:
 
-    - This application needs Node.js to execute. To install Node.js, run the appropriate installer from https://nodejs.org/en/ownload/ and follow the prompts to complete the installation.
+    - This application needs Node.js to execute. To install Node.js, run the appropriate installer from
+    https://nodejs.org/en/ownload/ and follow the prompts to complete the installation.
 
     - Clone this repo
 
@@ -54,7 +55,7 @@
     - The server should now start executing.
 
     - Open the Website
-    
+
     - Browse to http://localhost:{your chosen PORT number} to view the application website.
 <hr/>
 <br>
