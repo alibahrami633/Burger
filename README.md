@@ -41,11 +41,12 @@
 
     - Clone this repo through git bash to your local computer using:
 
-    - git clone `git@github.com:alibahrami633/Burger.git`
+        git clone `git@github.com:alibahrami633/Burger.git`
 
     - Install packages using "npm install"
 
-    - Install the database using schema.sql on MySQL Workbench and change the database credentials to your own local or remote chosen database
+    - Install the database using schema.sql on MySQL Workbench and change the database credentials
+    to your own local or remote chosen database
 
     - Start the server
 
