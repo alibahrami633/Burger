@@ -13,10 +13,13 @@ $(function() {
           data: devouredState
         }).then( () => {
             console.log("changed devoured to ", newDevoured);
+
+            $("burger_txt").val("");
             // Reload the page to get the updated list
             location.reload();
+            
           }
-        );
+        );        
       });
     
       $(".create-form").on("submit", function(event) {
